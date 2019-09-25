@@ -1,0 +1,51 @@
+@import '../Styles/variables';
+@import '../Styles/common-mixins';
+@import '../Styles/media-queries';
+
+
+.item-images {
+ 
+
+    &.bandsaw {
+        background-image: url('../assets/bandsaw.svg');
+    }
+
+   &.axe {
+    background-image: url('../assets/axe.svg'); 
+   }
+
+   &.sledgehammer {
+    background-image: url('../assets/sledgehammer.svg'); 
+   }
+
+   &.hacksaw {
+    background-image: url('../assets/hacksaw.svg'); 
+   }
+
+   &.chisel {
+    background-image: url('../assets/chisel.svg'); 
+   }
+
+
+
+}
+
+
+.cart-button {
+    background-color: $color-secondary-darkBlue;
+    color: $color-standard-white;
+    font-size: 12px;
+    width: fit-content;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 25px;
+  
+    &:disabled {
+        opacity:0.5;
+    }
+
+  }
+
+
+
+

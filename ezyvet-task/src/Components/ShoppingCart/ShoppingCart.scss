@@ -1,0 +1,41 @@
+@import '../../Styles/variables';
+@import '../../Styles/common-mixins';
+@import '../../Styles/typography';
+
+.shoppingcart {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .topwrapper {
+        background-color: $color-accent-darkPink;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 93.75%;
+        .headingwrapper {
+            padding: $gap-small;
+
+            h2 {
+                margin: $gap-large 0 $gap-normal 0;
+                @include typography($font-1, 30px, $color-standard-darkestGray, bold);
+            }
+
+            h3 {
+                @include typography($font-2, 16px, $color-standard-darkerGray, normal);
+                margin: 0;
+            }
+
+            @include tablet-max {
+                padding: $gap-xsmall;
+            }
+        }
+    }
+
+    .shoppingcart-wrapper {
+        display: flex;
+        width: 93.75%;
+    }
+}

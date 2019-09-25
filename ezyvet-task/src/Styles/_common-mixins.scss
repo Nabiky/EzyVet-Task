@@ -1,0 +1,104 @@
+@import 'variables';
+@import 'media-queries';
+
+@mixin font-size($sizeValue: 1, $extra: '') {
+    font-size: $sizeValue * $font-size-base unquote($extra);
+    font-size: unquote($sizeValue + 'rem');
+}
+
+@mixin line-height($sizeValue: 1, $extra: '') {
+    line-height: $sizeValue * $font-size-base unquote($extra);
+    line-height: unquote($sizeValue + 'rem');
+}
+
+@mixin non-touch-devices-only {
+    body:not(.touch-only) & {
+        @content;
+    }
+}
+
+@mixin hover-and-active {
+    &.active,
+    &:active {
+        @content;
+    }
+
+    @include non-touch-devices-only {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin active {
+    &.active,
+    &:active {
+        @content;
+    }
+}
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin transition-1($include: all, $duration: 150ms) {
+    transition: $duration ease-in-out $include !important;
+}
+
+@mixin transition-2($include) {
+    transition: 150ms ease-in-out all !important;
+    transition-property: $include;
+}
+
+@mixin bg-svg($pattern, $fill, $fillhover: null, $fillDisabled: null) {
+    background-image: url('#{$pattern}&fill=#{$fill}');
+
+    @if ($fillhover) {
+        @include hover-and-active {
+            background-image: url('#{$pattern}&fill=#{$fillhover}');
+        }
+    }
+
+    @if ($fillDisabled) {
+        &:disabled {
+            background-image: url('#{$pattern}&fill=#{$fillDisabled}') !important;
+        }
+    }
+}
+
+@mixin responsive-bg-image($image-width, $image-height) {
+    background-size: 100%;
+    height: 0;
+    padding-bottom: percentage($image-height / $image-width);
+    display: block;
+}
+
+
+// @mixin axe {
+//     background-image: url('../assets/axe.svg'); 
+// }
+
+// @mixin bandSaw {
+//     background-image: url('../assets/bandSaw.svg'); 
+// }
+
+
+
+
+// @mixin item-images(){
+    
+//     background: orange;
+    
+//     .axe  {
+//         border:2px solid salmon;
+//         background-image: url('../assets/axe.svg'); 
+//     }
+
+//     &-bandSaw & {
+//     background-image: url('../assets/bandSaw.svg'); 
+//     }
+
+ 
+// }

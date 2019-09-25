@@ -1,0 +1,57 @@
+h1,
+h2 {
+    margin: 0;
+}
+
+// Fonts
+$font-1: AvenirNextLTPro-Demi,  cursive;
+$font-2: AvenirNextLTPro-Medium, Helvetica, Arial, sans-serif;
+$font-3: AvenirNextLTPro-Regular, Helvetica, Arial, sans-serif;
+$font-4: AvenirNextLTPro-Bold, Helvetica, Arial, sans-serif;
+
+// Font size
+$font-size-base: 16px;
+
+// Primary colors
+$color-primary-orange: #ff9b00;
+$color-primary-pink: #ec008c;
+
+
+// Secondary colors
+$color-secondary-blue: #464958;
+$color-secondary-lightBlue: #6ed2ff;
+$color-secondary-darkBlue: #007cbd;
+$color-secondary-darkerBlue: #0096e6;
+
+// Accent colors
+
+$color-accent-lightPink: #f07db4;
+$color-accent-darkPink: #e49898;
+
+// Standard colors
+$color-standard-black: #000000;
+$color-standard-darkestGray: #333333;
+$color-standard-darkerGray: #666666;
+$color-standard-darkGray: #999999;
+$color-standard-gray: #b2b2b2;
+$color-standard-lightGray: #e8e8e8;
+$color-standard-lighterGray: #fafafa;
+$color-standard-white: #ffffff;
+
+
+
+// Export scss for JS files
+:export {
+    darkerGray: $color-standard-darkerGray;
+    darkestGray: $color-standard-darkestGray;
+    fonts: $font-2;
+}
+
+// Measurements
+$gap-xxsmall: 3px;
+$gap-xsmall: 5px;
+$gap-small: 8px;
+$gap-normal: 16px;
+$gap-large: 24px;
+$gap-xlarge: 32px;
+$gap-xxlarge: 40px;

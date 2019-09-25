@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'common-mixins';
+@import 'media-queries';
+
+@mixin typography($font: false, $font-size: false, $color: false, $weight: false ) {
+    @if $font {
+        font-family: $font;
+    }
+    @if $font-size {
+        font-size: $font-size;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+}
